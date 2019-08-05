@@ -58,4 +58,8 @@ config QCOM_TDLS
 	bool "Enable TDLS feature"
 	default n
 
+config QCOM_TDLS
+	bool "Enable TDLS feature"
+	default n
+
 endif # PRIMA_WLAN || PRONTO_WLAN
