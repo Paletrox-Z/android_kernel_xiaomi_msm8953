@@ -1,6 +1,9 @@
 /* Copyright (c) 2013-2017, The Linux Foundation. All rights reserved.
 <<<<<<< HEAD
+<<<<<<< HEAD
  * Copyright (C) 2017 XiaoMi, Inc.
+=======
+>>>>>>> 2fde63cd0f8b... msm: camera: Reset to LA.UM.5.6.r1-06900-89xx.0
 =======
 >>>>>>> 2fde63cd0f8b... msm: camera: Reset to LA.UM.5.6.r1-06900-89xx.0
  *

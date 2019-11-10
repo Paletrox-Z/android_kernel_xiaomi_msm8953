@@ -1,8 +1,5 @@
 /* Copyright (c) 2013-2016, The Linux Foundation. All rights reserved.
-<<<<<<< HEAD
  * Copyright (C) 2017 XiaoMi, Inc.
-=======
->>>>>>> 2fde63cd0f8b... msm: camera: Reset to LA.UM.5.6.r1-06900-89xx.0
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 and
@@ -1600,6 +1597,13 @@ void msm_isp_halt_send_error(struct vfe_device *vfe_dev, uint32_t event)
 			&vfe_dev->common_data->common_dev_data_lock, flags);
 	} else if (!vfe_dev->axi_data.num_active_stream)
 		return;
+=======
+	/* if there are no active streams - do not start recovery */
+	if (!vfe_dev->axi_data.num_active_stream)
+		return;
+
+<<<<<<< HEAD
+>>>>>>> 2fde63cd0f8b... msm: camera: Reset to LA.UM.5.6.r1-06900-89xx.0
 =======
 	/* if there are no active streams - do not start recovery */
 	if (!vfe_dev->axi_data.num_active_stream)
