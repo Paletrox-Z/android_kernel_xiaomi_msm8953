@@ -26,11 +26,8 @@ DEFINE_MSM_MUTEX(msm_flash_mutex);
 
 static struct v4l2_file_operations msm_flash_v4l2_subdev_fops;
 static struct led_trigger *torch_trigger;
-<<<<<<< HEAD
 static struct msm_flash_ctrl_t *g_fctrl;
 static unsigned char g_flashlight_brightness;
-=======
->>>>>>> 2fde63cd0f8b... msm: camera: Reset to LA.UM.5.6.r1-06900-89xx.0
 
 static const struct of_device_id msm_flash_dt_match[] = {
 	{.compatible = "qcom,camera-flash", .data = NULL},
@@ -759,7 +756,6 @@ static int32_t msm_flash_config(struct msm_flash_ctrl_t *flash_ctrl,
 				flash_ctrl);
 		break;
 	case CFG_FLASH_OFF:
-<<<<<<< HEAD
 		if (flash_ctrl->flash_state == MSM_CAMERA_FLASH_INIT) {
 			rc = flash_ctrl->func_tbl->camera_flash_off(
 				flash_ctrl, flash_data);
@@ -779,21 +775,6 @@ static int32_t msm_flash_config(struct msm_flash_ctrl_t *flash_ctrl,
 				flash_ctrl, flash_data);
 			g_flashlight_brightness = 100;
 		}
-=======
-		if (flash_ctrl->flash_state == MSM_CAMERA_FLASH_INIT)
-			rc = flash_ctrl->func_tbl->camera_flash_off(
-				flash_ctrl, flash_data);
-		break;
-	case CFG_FLASH_LOW:
-		if (flash_ctrl->flash_state == MSM_CAMERA_FLASH_INIT)
-			rc = flash_ctrl->func_tbl->camera_flash_low(
-				flash_ctrl, flash_data);
-		break;
-	case CFG_FLASH_HIGH:
-		if (flash_ctrl->flash_state == MSM_CAMERA_FLASH_INIT)
-			rc = flash_ctrl->func_tbl->camera_flash_high(
-				flash_ctrl, flash_data);
->>>>>>> 2fde63cd0f8b... msm: camera: Reset to LA.UM.5.6.r1-06900-89xx.0
 		break;
 	default:
 		rc = -EFAULT;

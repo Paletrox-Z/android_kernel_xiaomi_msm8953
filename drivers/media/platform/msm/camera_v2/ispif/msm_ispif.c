@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 /* Copyright (c) 2013-2017, 2019 The Linux Foundation. All rights reserved.
-=======
-/* Copyright (c) 2013-2016, The Linux Foundation. All rights reserved.
->>>>>>> 2fde63cd0f8b... msm: camera: Reset to LA.UM.5.6.r1-06900-89xx.0
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 and
