@@ -323,6 +323,11 @@ static long msm_ir_led_subdev_do_ioctl(
 		(struct msm_ir_led_cfg_data_t32 *)arg;
 	struct msm_ir_led_cfg_data_t ir_led_data;
 
+	CDBG("Enter\n");
+	ir_led_data.cfg_type = u32->cfg_type;
+	ir_led_data.pwm_duty_on_ns = u32->pwm_duty_on_ns;
+	ir_led_data.pwm_period_ns = u32->pwm_period_ns;
+
 	switch (cmd) {
 	case VIDIOC_MSM_IR_LED_CFG32:
 		cmd = VIDIOC_MSM_IR_LED_CFG;
@@ -331,7 +336,6 @@ static long msm_ir_led_subdev_do_ioctl(
 		return msm_ir_led_subdev_ioctl(sd, cmd, arg);
 	}
 
-	CDBG("Enter\n");
 	ir_led_data.cfg_type = u32->cfg_type;
 	ir_led_data.pwm_duty_on_ns = u32->pwm_duty_on_ns;
 	ir_led_data.pwm_period_ns = u32->pwm_period_ns;
